@@ -1,4 +1,7 @@
 <script>
+	/**
+	 * @type  {(event: Event) => void}
+	 */
 	export let onClick;
 </script>
 
