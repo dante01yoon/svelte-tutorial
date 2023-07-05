@@ -1,5 +1,5 @@
 <script>
-	const links = ['logic-key', 'logic-await'];
+	const links = ['logic-key', 'logic-await', 'event-handler'];
 </script>
 
 <title>svelte tutorial</title>
