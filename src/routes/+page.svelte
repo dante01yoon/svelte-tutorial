@@ -25,7 +25,7 @@
 </script>
 
 <div class="color-circle-box">
-	{#each colors as color}
+	{#each colors as color (color)}
 		<Thing style={`background-color: ${color};`} class="color-circle" name={color} />
 	{/each}
 	<Button {onClick}>remove first item</Button>
