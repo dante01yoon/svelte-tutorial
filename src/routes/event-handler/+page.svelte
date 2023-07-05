@@ -12,8 +12,20 @@
 
 <h1>Event handler blocks</h1>
 <main on:pointermove={(e) => (m = { x: e.clientX, y: e.clientY })} class="playground">
-	<h2>curreont position of 'm'</h2>
-	<div>x: {m.x} y: {m.y}</div>
+	<section>
+		<h2>curreont position of 'm'</h2>
+		<div>x: {m.x} y: {m.y}</div>
+	</section>
+	<section>
+		<h2>Event modifiers</h2>
+		<div>
+			<button
+				on:click|once|preventDefault={() => {
+					alert("clicked! won't fire again ");
+				}}>Click Me!</button
+			>
+		</div>
+	</section>
 </main>
 
 <style>
