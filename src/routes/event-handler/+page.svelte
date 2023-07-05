@@ -1,4 +1,12 @@
 <script>
+	import { createEventDispatcher } from 'svelte';
+	import ForwardButton from '~/components/ForwardButton.svelte';
+	import Inner from '~/components/Inner.svelte';
+	import ManualOuter from '~/components/ManualOuter.svelte';
+	import Outer from '~/components/Outer.svelte';
+	import horn from '~/components/horn.mp3';
+	const dispatch = createEventDispatcher();
+
 	/** @typedef {{x: number, y: number}} Point */
 	/** @type { Point } */
 	let m = { x: 0, y: 0 };
@@ -8,6 +16,13 @@
 		m.x = event.clientX;
 		m.y = event.clientY;
 	}
+
+	function sayHello() {
+		dispatch('message', {
+			text: 'Hello!'
+		});
+	}
+	const audio = new Audio();
 </script>
 
 <h1>Event handler blocks</h1>
@@ -25,6 +40,38 @@
 				}}>Click Me!</button
 			>
 		</div>
+	</section>
+	<section>
+		<h2>Component event + Event modifiers</h2>
+		<div>
+			<Inner
+				on:innerMessage|once={(e) => {
+					alert(e.detail.text);
+				}}
+			/>
+		</div>
+	</section>
+	<section>
+		<h2>Event forward - not forwarding</h2>
+		<ManualOuter on:innerMessage|once={(e) => alert(`Manual Outer: , ${e.detail.text}`)} />
+	</section>
+	<section>
+		<h2>Event forward - apply forwarding</h2>
+		<Outer on:innerMessage|once={(e) => alert(`Outer: , ${e.detail.text}`)} />
+	</section>
+	<section>
+		<h2>DOM forward - apply forwarding</h2>
+		<ForwardButton
+			on:click={() => {
+				audio.src = horn;
+
+				if (!audio.paused) {
+					audio.pause();
+				} else {
+					audio.play();
+				}
+			}}
+		/>
 	</section>
 </main>
 
