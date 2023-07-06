@@ -1,5 +1,5 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 	import ForwardButton from '~/components/ForwardButton.svelte';
 	import Inner from '~/components/Inner.svelte';
 	import ManualOuter from '~/components/ManualOuter.svelte';
@@ -22,7 +22,12 @@
 			text: 'Hello!'
 		});
 	}
-	const audio = new Audio();
+	/** @type {HTMLAudioElement} */
+	let audio;
+
+	onMount(() => {
+		audio = new Audio();
+	});
 </script>
 
 <h1>Event handler blocks</h1>
