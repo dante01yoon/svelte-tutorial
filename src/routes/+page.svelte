@@ -1,5 +1,12 @@
 <script>
-	const links = ['logic-key', 'logic-await', 'event-handler', 'binding', 'store/writable'];
+	const links = [
+		'logic-key',
+		'logic-await',
+		'event-handler',
+		'binding',
+		'store/writable',
+		'store/auto-subscribe'
+	];
 </script>
 
 <title>svelte tutorial</title>
