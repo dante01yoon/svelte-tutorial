@@ -6,7 +6,8 @@
 		'binding',
 		'store/writable',
 		'store/auto-subscribe',
-		'store/readable'
+		'store/readable',
+		'tweens'
 	];
 </script>
 
