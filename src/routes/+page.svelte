@@ -8,7 +8,8 @@
 		'store/auto-subscribe',
 		'store/readable',
 		'tweens',
-		'springs'
+		'springs',
+		'transitions'
 	];
 </script>
 
