@@ -5,7 +5,8 @@
 		'event-handler',
 		'binding',
 		'store/writable',
-		'store/auto-subscribe'
+		'store/auto-subscribe',
+		'store/readable'
 	];
 </script>
 
