@@ -8,11 +8,16 @@
 
 <!-- <svelte:window on:scroll={handleScroll} /> -->
 <svelte:window bind:scrollY={y} />
-
-<span> depth: {y}px</span>
+<div class="body">
+	<span> depth: {y}px</span>
+</div>
 
 <style>
 	:global(body) {
+		padding: 0 0;
+		margin: 0 0;
+	}
+	.body {
 		height: 400vw;
 		background: url(./deepsea.webp);
 		background-size: cover;

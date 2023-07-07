@@ -13,7 +13,11 @@
 		'special/self',
 		'special/component',
 		'special/element',
-		'special/window'
+		'special/window',
+		'special/document',
+		'special/head',
+		'module',
+		'debug'
 	];
 </script>
 
