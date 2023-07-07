@@ -7,3 +7,10 @@ svelte tutorial book
 > https://learn.svelte.dev/tutorial/introducing-sveltekit
 
 ![table-of-contents](/static/table_of_contents.png)
+
+# how to use this tutorial book.
+
+```
+$> npm install
+$> npm run dev
+```
