@@ -9,7 +9,8 @@
 		'store/readable',
 		'tweens',
 		'springs',
-		'transitions'
+		'transitions',
+		'special/self'
 	];
 </script>
 
