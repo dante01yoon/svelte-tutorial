@@ -10,7 +10,8 @@
 		'tweens',
 		'springs',
 		'transitions',
-		'special/self'
+		'special/self',
+		'special/component'
 	];
 </script>
 
