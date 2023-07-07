@@ -11,7 +11,8 @@
 		'springs',
 		'transitions',
 		'special/self',
-		'special/component'
+		'special/component',
+		'special/element'
 	];
 </script>
 
