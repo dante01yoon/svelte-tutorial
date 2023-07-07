@@ -12,7 +12,8 @@
 		'transitions',
 		'special/self',
 		'special/component',
-		'special/element'
+		'special/element',
+		'special/window'
 	];
 </script>
 

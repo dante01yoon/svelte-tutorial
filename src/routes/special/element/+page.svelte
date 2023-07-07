@@ -12,3 +12,8 @@
 <svelte:element this={selected}>
 	I'm a <code>&lt;{selected}&gt;</code> element
 </svelte:element>
+<svelte:window
+	on:keydown={(e) => {
+		console.info(e.key);
+	}}
+/>
